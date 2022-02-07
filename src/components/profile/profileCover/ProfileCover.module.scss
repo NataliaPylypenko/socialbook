@@ -1,0 +1,15 @@
+@import '../../../media';
+.cover{
+    background-image: url("../../../img/depositphotos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 4px;
+    @media #{$mobile}{
+        height: 200px;
+    }
+    img {
+        width: 100%;
+    }
+}
+

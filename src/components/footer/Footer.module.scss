@@ -1,0 +1,12 @@
+@import '../../media';
+
+.footer {
+  position: relative;
+  height: 100px;
+  background: rgba(#040928, .95);
+  color: #fff;
+  z-index: 999;
+  border-top: 2px solid rgba(#ee7829, 0.95);
+  padding: 20px;
+  box-sizing: border-box;
+}

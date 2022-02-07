@@ -1,0 +1,24 @@
+@import '../../media';
+
+.app_wrapper {
+    height: 100%;
+    padding-top: 130px;
+    color: #040928;
+    /*background-color: #040928;*/
+    /*color: #fff;*/
+    /*color: #ee7829;*/
+}
+
+.main_content {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    @media #{$mobile}{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}

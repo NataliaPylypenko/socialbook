@@ -1,0 +1,20 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(#040928, .95);
+    color: #fff;
+    z-index: 999;
+    border-bottom: 2px solid rgba(#ee7829, 0.95);
+    .logo {
+        font-family: 'Grenze Gotisch', cursive;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: bold;
+        color: #ee7829;
+    }
+}

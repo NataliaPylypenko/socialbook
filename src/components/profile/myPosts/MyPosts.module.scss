@@ -1,0 +1,51 @@
+@import '../../../media';
+.posts{
+  margin-bottom: 30px;
+}
+
+.new_post {
+  display: flex;
+  margin-bottom: 30px;
+  @media #{$mobile}{
+    flex-direction: column;
+  }
+  .textarea {
+    display:block;
+    box-sizing: border-box;
+    width: calc(100% - 170px);
+    resize: none;
+    overflow-y: hidden;
+    outline: 0;
+    background: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-right: 30px;
+    @media #{$mobile}{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .button {
+    background-color: #040928;
+    color: #ee7829;
+    border: 2px solid #040d28;
+    border-radius: 5px;
+    outline: 0;
+    padding: 15px 35px;
+    width: 140px;
+    @media #{$mobile}{
+      margin-left: auto;
+    }
+  }
+  .button:hover,
+  .button:active {
+    background-color: #040d28;
+    border: 2px solid #ee7829;
+  }
+
+}
+
+.isset_posts {
+  margin-bottom: 30px;
+}
