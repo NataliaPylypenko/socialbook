@@ -6,13 +6,14 @@ import ProfileCover from "./profileCover/ProfileCover";
 
 const Profile = (props) => {
 
-    let postData = props.postData;
-
     return (
         <>
             <ProfileCover />
             <ProfileInfo />
-            <MyPosts postData={postData} />
+            <MyPosts newPostText={props.newPostText}
+                     postData={props.profilePage.postData}
+                     updateNewPostText={props.updateNewPostText}
+                     addPost={props.addPost} />
         </>
     )
 };

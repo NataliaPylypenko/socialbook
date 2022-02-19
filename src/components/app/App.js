@@ -15,10 +15,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = (props) => {
 
-  let nav = props.nav;
-  let dialogsData = props.dialogsData;
-  let messagesData = props.messagesData;
-  let postData = props.postData;
+  let nav = props.state.nav;
+  let profilePage = props.state.profilePage;
+  let dialogsPage = props.state.dialogsPage;
+
+  let addPost = props.addPost;
+  let updateNewPostText = props.updateNewPostText;
+
 
   return (
       <Router>
@@ -34,8 +37,12 @@ const App = (props) => {
                       <div className={c.main_content}>
 
                           <Routes>
-                              <Route exact path="/socialbook" element={<Profile postData={postData} />} />
-                              <Route exact path="/dialogs/*" element={<Dialogs dialogsData={dialogsData} messagesData={messagesData} />} />
+                              <Route exact path="/socialbook" element={ <Profile
+                                  profilePage={profilePage}
+                                  updateNewPostText={updateNewPostText}
+                                  addPost={addPost} />
+                              } />
+                              <Route exact path="/dialogs/*" element={<Dialogs dialogsPage={dialogsPage} />} />
                               <Route path="*" element={<Error />} />
                           </Routes>
 

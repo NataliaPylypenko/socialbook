@@ -1,6 +1,10 @@
 @import '../../media';
 
 .app_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 100%;
     padding-top: 130px;
     color: #040928;
