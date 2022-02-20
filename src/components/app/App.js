@@ -19,9 +19,6 @@ const App = (props) => {
   let profilePage = props.state.profilePage;
   let dialogsPage = props.state.dialogsPage;
 
-  let addPost = props.addPost;
-  let updateNewPostText = props.updateNewPostText;
-
 
   return (
       <Router>
@@ -37,10 +34,11 @@ const App = (props) => {
                       <div className={c.main_content}>
 
                           <Routes>
-                              <Route exact path="/socialbook" element={ <Profile
-                                  profilePage={profilePage}
-                                  updateNewPostText={updateNewPostText}
-                                  addPost={addPost} />
+                              <Route exact path="/socialbook" element={
+                                  <Profile
+                                      profilePage={profilePage}
+                                      dispatch={props.dispatch}
+                                  />
                               } />
                               <Route exact path="/dialogs/*" element={<Dialogs dialogsPage={dialogsPage} />} />
                               <Route path="*" element={<Error />} />
